@@ -16,13 +16,12 @@ const Home = () => {
     return (
         <div className="overlay">
             <Nav
-                authToken={authToken}
                 showModal={showModal}
                 setShowModal={setShowModal}
                 setIsSignUp={setIsSignUp}
             />
             <div className="Home">
-                <h1>Dog Daze</h1>
+                <h1 className="primary-title">Dog Daze</h1>
                 <button className="primary-button" onClick={handleClick}>
                     {authToken ? "Sign out" : "Create Account"}
                 </button>
@@ -31,7 +30,6 @@ const Home = () => {
                     <AuthModal
                         setShowModal={setShowModal}
                         isSignUp={isSignUp}
-                        setIsSignUp={setIsSignUp}
                     />
                 )}
             </div>
